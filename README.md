@@ -33,7 +33,7 @@ chmod +x xmrig-menu.sh
 
 ---
 
-3. Menu chức năng
+### 3. Menu chức năng
 
 Sau khi chạy, bạn sẽ thấy menu:
 
