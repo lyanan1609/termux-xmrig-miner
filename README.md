@@ -29,7 +29,7 @@ Tải Termux từ GitHub (khuyên dùng):
 2. `apt update -y && apt upgrade -y`
 3. `git clone https://github.com/xmrig/xmrig && cd xmrig`
 4. `mkdir build && cd build`
-5. `cmake -DWITH_HWLOC=OFF .. && make` and Wait a Wait a few minutes while it downloads the data.
+5. `cmake -DWITH_HWLOC=OFF .. && make` and Wait a few minutes while it downloads the data.
 6. after complete all processing just --open new session--
 ### 3. Chạy lệnh cài auto đào coin XMRig
 
