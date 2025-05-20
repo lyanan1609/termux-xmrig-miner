@@ -1,4 +1,4 @@
-# Termux XMRig Miner - Đào Monero trên Android (Termux)
+# Termux XMRig Miner - Đào Monero tự động trên Android (Termux)
 
 Một script đơn giản giúp bạn đào Monero (XMR) bằng `XMRig` trên Android thông qua Termux. Script có menu tiện lợi: bắt đầu đào, cập nhật công cụ, và xem giá XMR hiện tại.
 
@@ -31,5 +31,8 @@ Tải Termux từ GitHub (khuyên dùng):
 4. `mkdir build && cd build`
 5. `cmake -DWITH_HWLOC=OFF .. && make` and Wait a few minutes while it downloads the data.
 6. after complete all processing just --open new session--
+
+---
+
 ### 3. Chạy lệnh cài auto đào coin XMRig
 
