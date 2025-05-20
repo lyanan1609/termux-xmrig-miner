@@ -25,7 +25,10 @@ Tải Termux từ F-Droid (khuyên dùng):
 
 ### 2. Chạy script
 
-```bash
-curl -sLO https://raw.githubusercontent.com/lyanan1609/termux-xmrig-miner/main/xmrig-menu.sh
-chmod +x xmrig-menu.sh
-./xmrig-menu.sh
+1. `apt update && apt install git -y`
+2. `git clone https://github.com/lyanan1609/termux-xmrig-miner/main/xmrig-menu.sh`
+3. `chmod +x xmrig-menu.sh/`
+4. `ls`
+5. `./xmrig-menu.sh`
+6. after complete all processing just --open new session--
+###
