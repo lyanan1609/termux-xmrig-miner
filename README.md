@@ -18,17 +18,18 @@ Một script đơn giản giúp bạn đào Monero (XMR) bằng `XMRig` trên An
 ## Hướng dẫn cài đặt và sử dụng
 
 ### 1. Cài đặt Termux
-Tải Termux từ F-Droid (khuyên dùng):  
-[https://f-droid.org/packages/com.termux/](https://f-droid.org/packages/com.termux/)
+Tải Termux từ GitHub (khuyên dùng):  
+[https://github.com/termux/termux-app/releases/tag/v0.118.2](https://github.com/termux/termux-app/releases/tag/v0.118.2)
 
 ---
 
-### 2. Chạy script
+### 2. Chạy lệnh cài tool XMRig
 
-1. `apt update && apt install git -y`
-2. `git clone https://github.com/lyanan1609/termux-xmrig-miner/main/xmrig-menu.sh`
-3. `chmod +x xmrig-menu.sh/`
-4. `ls`
-5. `./xmrig-menu.sh`
+1. `apt-get update -y && apt-get install git -y && pkg install cmake`
+2. `apt update -y && apt upgrade -y`
+3. `git clone https://github.com/xmrig/xmrig && cd xmrig`
+4. `mkdir build && cd build`
+5. `cmake -DWITH_HWLOC=OFF .. && make` and Wait a Wait a few minutes while it downloads the data.
 6. after complete all processing just --open new session--
-###
+### 3. Chạy lệnh cài auto đào coin XMRig
+
