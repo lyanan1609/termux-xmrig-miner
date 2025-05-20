@@ -44,3 +44,4 @@ Tải Termux từ GitHub (khuyên dùng):
 Hoàn thành
 
 ---
+### 4. Để chạy nhanh hơn
