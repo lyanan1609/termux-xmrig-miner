@@ -1,6 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-# Cài gói cần thiết nếu chưa có
 pkg install -y git curl clang cmake build-essential neofetch jq > /dev/null 2>&1
 
 RED='\033[1;31m'; GREEN='\033[1;32m'; BLUE='\033[1;34m'; CYAN='\033[1;36m'; YELLOW='\033[1;33m'; NC='\033[0m'
@@ -35,6 +34,7 @@ start_mining() {
   cd ~/xmrig/build || { echo -e "${RED}[X] Không tìm thấy thư mục XMRig!${NC}"; return; }
 
   while true; do
+    echo -e "${BLUE}==> Đang chạy XMRig...${NC}"
     ./xmrig -o asia.hashvault.pro:443 -a rx -u 85BvvbNHc2wCZUYwUqojbqYHFBAixfdjRME2CE5kccLWcHv4J5n7L7QFxXF7HT5G2XYyM62pMLf5oaCH2hwmtzPa83Rfkcu -p N20U-001 -t 7
     echo -e "${RED}[!] XMRig dừng. Khởi động lại sau 10s...${NC}"
     sleep 10
