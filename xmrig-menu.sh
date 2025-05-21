@@ -10,7 +10,7 @@ show_banner() {
   neofetch
   echo -e "${CYAN}"
   echo "╔═══════════════════════════════════════════════╗"
-  echo "║       SCRIPT ĐÀO XMR TỰ ĐỘNG - TERMUX        ║"
+  echo "║       SCRIPT ĐÀO XMR TỰ ĐỘNG - TERMUX                 ║"
   echo "╚═══════════════════════════════════════════════╝"
   echo -e "${NC}"
 }
