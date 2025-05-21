@@ -10,7 +10,7 @@ show_banner() {
   neofetch
   echo -e "${CYAN}"
   echo "╔═══════════════════════════════════════════════╗"
-  echo "║       SCRIPT ĐÀO XMR TỰ ĐỘNG - TERMUX                 ║"
+  echo "║       SCRIPT ĐÀO XMR TỰ ĐỘNG - TERMUX         ║"
   echo "╚═══════════════════════════════════════════════╝"
   echo -e "${NC}"
 }
@@ -41,41 +41,15 @@ start_mining() {
   done
 }
 
-update_xmrig() {
-  echo -e "${BLUE}[*] Đang cập nhật XMRig...${NC}"
-  rm -rf ~/xmrig
-  git clone https://github.com/xmrig/xmrig.git ~/xmrig
-  mkdir -p ~/xmrig/build && cd ~/xmrig/build
-  cmake ..
-  make -j$(nproc)
-  echo -e "${GREEN}[✓] Đã cập nhật và build lại XMRig!${NC}"
-}
-
-check_price() {
-  echo -e "${BLUE}[*] Đang lấy giá XMR...${NC}"
-  response=$(curl -s https://api.coingecko.com/api/v3/simple/price?ids=monero&vs_currencies=usd)
-  price=$(echo "$response" | jq -r '.monero.usd')
-  if [ "$price" != "null" ]; then
-    echo -e "${GREEN}[✓] Giá hiện tại của XMR: $${price} USD${NC}"
-  else
-    echo -e "${RED}[X] Không thể lấy giá.${NC}"
-  fi
-  sleep 3
-}
-
 while true; do
   show_banner
   echo -e "${CYAN}Chọn chức năng:${NC}"
   echo "1. Bắt đầu đào"
-  echo "2. Cập nhật tool XMRig"
-  echo "3. Xem giá đồng XMR"
   echo "0. Thoát"
   read -p "> Nhập lựa chọn: " choice
 
   case $choice in
     1) start_mining ;;
-    2) update_xmrig ;;
-    3) check_price ;;
     0) echo -e "${YELLOW}Tạm biệt!${NC}"; exit 0 ;;
     *) echo -e "${RED}Lựa chọn không hợp lệ.${NC}" ;;
   esac
